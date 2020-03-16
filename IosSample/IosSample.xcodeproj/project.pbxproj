@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0D3BB3241A1D1900A8B342 /* TxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D3BB2241A1D1900A8B342 /* TxViewController.swift */; };
+		8C0D3BB5241A32B800A8B342 /* api.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D3BB4241A32B800A8B342 /* api.c */; };
+		8C0D3BB7241A7CA600A8B342 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D3BB6241A7CA600A8B342 /* DepositViewController.swift */; };
+		8C0D3BB9241B3B6500A8B342 /* UnbondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D3BB8241B3B6500A8B342 /* UnbondViewController.swift */; };
+		8C0D3BBB241B3CE500A8B342 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D3BBA241B3CE500A8B342 /* WithdrawViewController.swift */; };
+		8C0D3BBD241B3DBB00A8B342 /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D3BBC241B3DBB00A8B342 /* TransferViewController.swift */; };
 		8C2C22A224163EDD003667B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C22A124163EDD003667B1 /* AppDelegate.swift */; };
 		8C2C22A424163EDD003667B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C22A324163EDD003667B1 /* SceneDelegate.swift */; };
 		8C2C22A624163EDD003667B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C22A524163EDD003667B1 /* ViewController.swift */; };
@@ -15,12 +21,16 @@
 		8C2C22AE24163EDF003667B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2C22AC24163EDF003667B1 /* LaunchScreen.storyboard */; };
 		8C2C22BC24163F7F003667B1 /* libcro_clib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2C22B724163F7F003667B1 /* libcro_clib.a */; };
 		8C2C22BD24163F7F003667B1 /* rpc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C22B824163F7F003667B1 /* rpc.c */; };
-		8C2C22BE24163F7F003667B1 /* tx.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C22B924163F7F003667B1 /* tx.c */; };
-		8C2C22BF24163F7F003667B1 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C22BB24163F7F003667B1 /* test.c */; };
 		8C2C22C4241778D1003667B1 /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C22C3241778D1003667B1 /* MyData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C0D3BB2241A1D1900A8B342 /* TxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxViewController.swift; sourceTree = "<group>"; };
+		8C0D3BB4241A32B800A8B342 /* api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = api.c; sourceTree = "<group>"; };
+		8C0D3BB6241A7CA600A8B342 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
+		8C0D3BB8241B3B6500A8B342 /* UnbondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnbondViewController.swift; sourceTree = "<group>"; };
+		8C0D3BBA241B3CE500A8B342 /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
+		8C0D3BBC241B3DBB00A8B342 /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		8C2C229E24163EDD003667B1 /* IosSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2C22A124163EDD003667B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C2C22A324163EDD003667B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,9 +43,7 @@
 		8C2C22B624163F7D003667B1 /* chain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chain.h; sourceTree = "<group>"; };
 		8C2C22B724163F7F003667B1 /* libcro_clib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcro_clib.a; sourceTree = "<group>"; };
 		8C2C22B824163F7F003667B1 /* rpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rpc.c; sourceTree = "<group>"; };
-		8C2C22B924163F7F003667B1 /* tx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tx.c; sourceTree = "<group>"; };
 		8C2C22BA24163F7F003667B1 /* chain-core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "chain-core.h"; sourceTree = "<group>"; };
-		8C2C22BB24163F7F003667B1 /* test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
 		8C2C22C3241778D1003667B1 /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,8 +82,6 @@
 				8C2C22B624163F7D003667B1 /* chain.h */,
 				8C2C22B724163F7F003667B1 /* libcro_clib.a */,
 				8C2C22B824163F7F003667B1 /* rpc.c */,
-				8C2C22BB24163F7F003667B1 /* test.c */,
-				8C2C22B924163F7F003667B1 /* tx.c */,
 				8C2C22A124163EDD003667B1 /* AppDelegate.swift */,
 				8C2C22A324163EDD003667B1 /* SceneDelegate.swift */,
 				8C2C22A524163EDD003667B1 /* ViewController.swift */,
@@ -85,6 +91,12 @@
 				8C2C22AF24163EDF003667B1 /* Info.plist */,
 				8C2C22B524163F7C003667B1 /* IosSample-Bridging-Header.h */,
 				8C2C22C3241778D1003667B1 /* MyData.swift */,
+				8C0D3BB2241A1D1900A8B342 /* TxViewController.swift */,
+				8C0D3BB4241A32B800A8B342 /* api.c */,
+				8C0D3BB6241A7CA600A8B342 /* DepositViewController.swift */,
+				8C0D3BB8241B3B6500A8B342 /* UnbondViewController.swift */,
+				8C0D3BBA241B3CE500A8B342 /* WithdrawViewController.swift */,
+				8C0D3BBC241B3DBB00A8B342 /* TransferViewController.swift */,
 			);
 			path = IosSample;
 			sourceTree = "<group>";
@@ -161,13 +173,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C0D3BBD241B3DBB00A8B342 /* TransferViewController.swift in Sources */,
+				8C0D3BB9241B3B6500A8B342 /* UnbondViewController.swift in Sources */,
 				8C2C22A624163EDD003667B1 /* ViewController.swift in Sources */,
 				8C2C22A224163EDD003667B1 /* AppDelegate.swift in Sources */,
 				8C2C22A424163EDD003667B1 /* SceneDelegate.swift in Sources */,
-				8C2C22BF24163F7F003667B1 /* test.c in Sources */,
-				8C2C22BE24163F7F003667B1 /* tx.c in Sources */,
+				8C0D3BBB241B3CE500A8B342 /* WithdrawViewController.swift in Sources */,
+				8C0D3BB5241A32B800A8B342 /* api.c in Sources */,
+				8C0D3BB3241A1D1900A8B342 /* TxViewController.swift in Sources */,
 				8C2C22C4241778D1003667B1 /* MyData.swift in Sources */,
 				8C2C22BD24163F7F003667B1 /* rpc.c in Sources */,
+				8C0D3BB7241A7CA600A8B342 /* DepositViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
