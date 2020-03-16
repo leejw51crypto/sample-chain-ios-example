@@ -1,8 +1,3 @@
-//
-//  SceneDelegate.swift
-//  IosSample
-
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

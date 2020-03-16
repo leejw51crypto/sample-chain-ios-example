@@ -15,8 +15,6 @@ uint64_t g_end;
 float g_rate;
 int g_stop=0;
 
-
-
 float get_rate()
 {
     return g_rate;
@@ -37,7 +35,6 @@ int32_t progress(uint64_t current, uint64_t start, uint64_t end, const void*  us
         rate= (current-start)/ gap*1.0;
     }
     char* user= (char*)user_data;
-    
     // save
     g_current= current;
     g_start = start;
@@ -51,7 +48,7 @@ void show_wallets()
 {
     const int BUFSIZE=1000;
     char buf[BUFSIZE];
-     const char* req = "{\"jsonrpc\": \"2.0\", \"method\": \"wallet_list\", \"params\": [], \"id\": 1}";
+    const char* req = "{\"jsonrpc\": \"2.0\", \"method\": \"wallet_list\", \"params\": [], \"id\": 1}";
     CroResult retcode = cro_jsonrpc_call("./.storage", "ws://localhost:26657/websocket", 0xab, req, buf, sizeof(buf), &progress,NULL);
     if (retcode.result == 0) {
         printf("response: %s\n", buf);
@@ -71,7 +68,6 @@ void sync()
     char req[BUFSIZE];
     sprintf(req, req_template, name, passphrase, enckey);
     char* user_data="i'm user";
-
     CroResult retcode = cro_jsonrpc_call("./.storage", "ws://localhost:26657/websocket", 0xab, req, buf, sizeof(buf), &progress, user_data);
     if (retcode.result == 0) {
         printf("response: %s\n", buf);
@@ -80,14 +76,11 @@ void sync()
     }
 }
 
-
-  
 void restore_wallet(const char* tendermint_url, const char* storage, const char* name, const char* passphrase, const char* enckey, const char* mnemonics)
 {
     printf("restore %s %s %s %s %s %s\n", tendermint_url, storage, name, passphrase, enckey, mnemonics);
     const int BUFSIZE=1000;
     char buf[BUFSIZE];
-   
     const char* user="ios-user";
     const char* wallet_req = "{\"jsonrpc\": \"2.0\", \"method\": \"wallet_list\", \"params\": [], \"id\": 1}";
     const char* wallet_restore_req = "{\"jsonrpc\": \"2.0\", \"method\": \"wallet_restore\", \"params\": [{\"name\":\"%s\", \"passphrase\":\"%s\"}, \"%s\"], \"id\": 2}";
@@ -100,10 +93,9 @@ void restore_wallet(const char* tendermint_url, const char* storage, const char*
     printf("response: %s\n", buf);
     cro_run_jsonrpc(rpc, tmp, buf, sizeof(buf), user);
     printf("response: %s\n", buf);
-   
     cro_destroy_jsonrpc(rpc);
     printf("OK\n");
-
+    
 }
 
 void sync_wallet(const char* tendermint_url, const char* storage, const char* name, const char* passphrase, const char* enckey, const char* mnemonics)
@@ -114,7 +106,6 @@ void sync_wallet(const char* tendermint_url, const char* storage, const char* na
     const char* req_template = "{\"jsonrpc\": \"2.0\", \"method\": \"sync\", \"params\": [{\"name\":\"%s\", \"passphrase\":\"%s\",\"enckey\":\"%s\"}], \"id\": 1}";
     char req[BUFSIZE];
     sprintf(req, req_template, name, passphrase, enckey);
-
     const char* user="sync";
     const char* wallet_req = "{\"jsonrpc\": \"2.0\", \"method\": \"wallet_list\", \"params\": [], \"id\": 1}";
     const char* wallet_restore_req = "{\"jsonrpc\": \"2.0\", \"method\": \"wallet_restore\", \"params\": [{\"name\":\"%s\", \"passphrase\":\"%s\"}, \"%s\"], \"id\": 2}";
@@ -129,7 +120,6 @@ void sync_wallet(const char* tendermint_url, const char* storage, const char* na
     printf("response: %s\n", buf);
     cro_run_jsonrpc(rpc, req, buf, sizeof(buf),user);
     printf("response: %s\n", buf);
-
     cro_destroy_jsonrpc(rpc);
     printf("OK\n");
 }
@@ -145,7 +135,6 @@ void context_sync()
     const char* req_template = "{\"jsonrpc\": \"2.0\", \"method\": \"sync\", \"params\": [{\"name\":\"%s\", \"passphrase\":\"%s\",\"enckey\":\"%s\"}], \"id\": 1}";
     char req[BUFSIZE];
     sprintf(req, req_template, name, passphrase, enckey);
-
     const char* user="i'm user";
     const char* wallet_req = "{\"jsonrpc\": \"2.0\", \"method\": \"wallet_list\", \"params\": [], \"id\": 1}";
     const char* wallet_restore_req = "{\"jsonrpc\": \"2.0\", \"method\": \"wallet_restore\", \"params\": [{\"name\":\"%s\", \"passphrase\":\"%s\"}, \"%s\"], \"id\": 2}";
@@ -160,12 +149,10 @@ void context_sync()
     printf("response: %s\n", buf);
     cro_run_jsonrpc(rpc, req, buf, sizeof(buf),user);
     printf("response: %s\n", buf);
-    
     cro_destroy_jsonrpc(rpc);
     printf("OK\n");
-
+    
 }
-
 
 int test_rpc()
 {    
